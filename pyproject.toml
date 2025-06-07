@@ -1,0 +1,17 @@
+[project]
+name = "docker-pretty-ps"
+version = "0.1.0"
+description = "Pretty prints docker-ps"
+readme = "README.md"
+authors = [
+    { name = "jpm7", email = "jpm7@jpm7.org" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+docker-pretty-ps = "docker_pretty_ps:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
