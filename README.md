@@ -20,7 +20,7 @@ uv tool install git+https://github.com/j-p-m-7/docker-pretty-ps
 $ docker-pretty-ps
 ```
 
-<img src="https://raw.githubusercontent.com/j-p-m-7/whois-pretty/refs/heads/main/img.png" alt="Logo" width="600"/>
+<img src="https://raw.githubusercontent.com/j-p-m-7/docker-pretty-ps/refs/heads/main/img.png" alt="Logo" width="600"/>
 
 
 ### Credits
