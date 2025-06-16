@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
-import argparse
+from datetime import datetime
 import subprocess
+import argparse
 import json
 
 # ANSI formatting
@@ -137,6 +138,16 @@ def main():
     # Apply ANSI colors to image names
     containers = apply_colors_to_containers(containers)
 
+    def parse_created_at(item):
+        # Remove the " EDT" suffix
+        timestamp_str = item["CreatedAt"].rsplit(" ", 1)[0]
+        return datetime.strptime(timestamp_str, "%Y-%m-%d %H:%M:%S %z")
+
+    containers = sorted(containers, key=parse_created_at)
+
+    for container in containers:
+        print(container)
+    
     # Print output
     print_containers(containers, show_all=args.all, slim=args.slim)
 
