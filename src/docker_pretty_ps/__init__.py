@@ -144,9 +144,6 @@ def main():
         return datetime.strptime(timestamp_str, "%Y-%m-%d %H:%M:%S %z")
 
     containers = sorted(containers, key=parse_created_at)
-
-    for container in containers:
-        print(container)
     
     # Print output
     print_containers(containers, show_all=args.all, slim=args.slim)
